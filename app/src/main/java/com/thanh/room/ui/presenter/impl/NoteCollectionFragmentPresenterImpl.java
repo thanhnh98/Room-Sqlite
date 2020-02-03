@@ -32,7 +32,6 @@ public class NoteCollectionFragmentPresenterImpl implements NoteCollectionFragme
         mDB.getNoteDao().getListNote().subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(response->{
-                    //Toast.makeText(context, ""+response.size(), Toast.LENGTH_SHORT).show();
                     view.initAdapter(context,response);
                     view.initRecyclerView();
                 });

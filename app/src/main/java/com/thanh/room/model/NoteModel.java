@@ -15,7 +15,8 @@ public class NoteModel {
     public String createAt;
     @ColumnInfo(name = "status")
     public int status; // 0 cancel - 1 active - 2 pin
-
+    @ColumnInfo(name = "ableToDelete",defaultValue = "0")
+    public int ableToDelete;
     public int getId() {
         return id;
     }
